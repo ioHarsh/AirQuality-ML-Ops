@@ -1,0 +1,54 @@
+2025-11-07 16:50:46,583 INFO Running data_generator.generate_sensor_readings with params {'days': 30, 'locations': 5, 'freq': 'hourly'}
+2025-11-07 16:50:46,751 INFO Running data_generator.generate_weather_data with params {'days': 30, 'locations': 5}
+2025-11-07 16:50:46,880 INFO Running etl.run_etl with params {'sensor_path': 'artifacts/data/sensor_readings.csv', 'weather_path': 'artifacts/data/weather.csv', 'out_path': 'artifacts/data/processed.csv', 'agg_freq': 'daily'}
+2025-11-07 16:50:46,922 INFO ETL produced artifacts/data/processed.csv with 155 rows
+2025-11-07 16:50:53,754 INFO Running model.train with params {'data_path': 'artifacts/data/processed.csv', 'model_path': 'artifacts/models/aqi_model.joblib', 'test_size': 0.2}
+2025-11-07 16:50:53,963 INFO Model saved to artifacts/models/aqi_model.joblib. RMSE: 1.626
+2025-11-07 16:50:53,964 INFO Running model.predict_today with params {'model_path': 'artifacts/models/aqi_model.joblib', 'output_path': 'artifacts/predictions/prediction_{{date}}.csv'}
+2025-11-07 16:50:53,992 INFO Predictions saved to artifacts/predictions/prediction_2025-11-07.csv
+2025-11-07 16:50:53,992 INFO Pipeline finished
+2025-11-10 10:47:20,114 INFO Running data_generator.generate_sensor_readings with params {'days': 30, 'locations': 5, 'freq': 'hourly'}
+2025-11-10 10:47:20,291 INFO Running data_generator.generate_weather_data with params {'days': 30, 'locations': 5}
+2025-11-10 10:47:20,447 INFO Running etl.run_etl with params {'sensor_path': 'artifacts/data/sensor_readings.csv', 'weather_path': 'artifacts/data/weather.csv', 'out_path': 'artifacts/data/processed.csv', 'agg_freq': 'daily'}
+2025-11-10 10:47:20,500 INFO ETL produced artifacts/data/processed.csv with 155 rows
+2025-11-10 10:47:24,259 INFO Running model.train with params {'data_path': 'artifacts/data/processed.csv', 'model_path': 'artifacts/models/aqi_model.joblib', 'test_size': 0.2}
+2025-11-10 10:47:24,476 INFO Model saved to artifacts/models/aqi_model.joblib. RMSE: 2.337
+2025-11-10 10:47:24,476 INFO Running model.predict_today with params {'model_path': 'artifacts/models/aqi_model.joblib', 'output_path': 'artifacts/predictions/prediction_{{date}}.csv'}
+2025-11-10 10:47:24,509 INFO Predictions saved to artifacts/predictions/prediction_2025-11-10.csv
+2025-11-10 10:47:24,510 INFO Pipeline finished
+2025-11-10 11:15:47,774 INFO Running data_generator.generate_sensor_readings with params {'days': 30, 'locations': 5, 'freq': 'hourly'}
+2025-11-10 11:15:47,911 INFO Running data_generator.generate_weather_data with params {'days': 30, 'locations': 5}
+2025-11-10 11:15:48,069 INFO Running etl.run_etl with params {'sensor_path': 'artifacts/data/sensor_readings.csv', 'weather_path': 'artifacts/data/weather.csv', 'out_path': 'artifacts/data/processed.csv', 'agg_freq': 'daily'}
+2025-11-10 11:15:48,113 INFO ETL produced artifacts/data/processed.csv with 155 rows
+2025-11-10 11:15:50,066 INFO Running model.train with params {'data_path': 'artifacts/data/processed.csv', 'model_path': 'artifacts/models/aqi_model.joblib', 'test_size': 0.2}
+2025-11-10 11:15:50,303 INFO Model saved to artifacts/models/aqi_model.joblib. RMSE: 2.544
+2025-11-10 11:15:50,304 INFO Running model.predict_today with params {'model_path': 'artifacts/models/aqi_model.joblib', 'output_path': 'artifacts/predictions/prediction_{{date}}.csv'}
+2025-11-10 11:15:50,336 INFO Predictions saved to artifacts/predictions/prediction_2025-11-10.csv
+2025-11-10 11:15:50,337 INFO Pipeline finished
+2025-11-10 11:19:34,063 INFO Running data_generator.generate_sensor_readings with params {'days': 30, 'locations': 5, 'freq': 'hourly'}
+2025-11-10 11:19:34,255 INFO Running data_generator.generate_weather_data with params {'days': 30, 'locations': 5}
+2025-11-10 11:19:34,429 INFO Running etl.run_etl with params {'sensor_path': 'artifacts/data/sensor_readings.csv', 'weather_path': 'artifacts/data/weather.csv', 'out_path': 'artifacts/data/processed.csv', 'agg_freq': 'daily'}
+2025-11-10 11:19:34,480 INFO ETL produced artifacts/data/processed.csv with 155 rows
+2025-11-10 11:19:36,754 INFO Running model.train with params {'data_path': 'artifacts/data/processed.csv', 'model_path': 'artifacts/models/aqi_model.joblib', 'test_size': 0.2}
+2025-11-10 11:19:37,021 INFO Model saved to artifacts/models/aqi_model.joblib. RMSE: 1.922
+2025-11-10 11:19:37,022 INFO Running model.predict_today with params {'model_path': 'artifacts/models/aqi_model.joblib', 'output_path': 'artifacts/predictions/prediction_{{date}}.csv'}
+2025-11-10 11:19:37,062 INFO Predictions saved to artifacts/predictions/prediction_2025-11-10.csv
+2025-11-10 11:19:37,063 INFO Pipeline finished
+2025-11-10 11:20:05,822 INFO Running data_generator.generate_sensor_readings with params {'days': 30, 'locations': 5, 'freq': 'hourly'}
+2025-11-10 11:20:06,033 INFO Running data_generator.generate_weather_data with params {'days': 30, 'locations': 5}
+2025-11-10 11:20:06,230 INFO Running etl.run_etl with params {'sensor_path': 'artifacts/data/sensor_readings.csv', 'weather_path': 'artifacts/data/weather.csv', 'out_path': 'artifacts/data/processed.csv', 'agg_freq': 'daily'}
+2025-11-10 11:20:06,284 INFO ETL produced artifacts/data/processed.csv with 155 rows
+2025-11-10 11:20:08,695 INFO Running model.train with params {'data_path': 'artifacts/data/processed.csv', 'model_path': 'artifacts/models/aqi_model.joblib', 'test_size': 0.2}
+2025-11-10 11:20:08,960 INFO Model saved to artifacts/models/aqi_model.joblib. RMSE: 1.683
+2025-11-10 11:20:08,961 INFO Running model.predict_today with params {'model_path': 'artifacts/models/aqi_model.joblib', 'output_path': 'artifacts/predictions/prediction_{{date}}.csv'}
+2025-11-10 11:20:08,999 INFO Predictions saved to artifacts/predictions/prediction_2025-11-10.csv
+2025-11-10 11:20:09,000 INFO Pipeline finished
+2025-11-10 11:40:47,124 INFO Running data_generator.generate_sensor_readings with params {'days': 30, 'locations': 5, 'freq': 'hourly'}
+2025-11-10 11:40:47,226 INFO Running data_generator.generate_weather_data with params {'days': 30, 'locations': 5}
+2025-11-10 11:40:47,341 INFO Running etl.run_etl with params {'sensor_path': 'artifacts/data/sensor_readings.csv', 'weather_path': 'artifacts/data/weather.csv', 'out_path': 'artifacts/data/processed.csv', 'agg_freq': 'daily'}
+2025-11-10 11:40:47,378 INFO ETL produced artifacts/data/processed.csv with 155 rows
+2025-11-10 11:40:48,921 INFO Running model.train with params {'data_path': 'artifacts/data/processed.csv', 'model_path': 'artifacts/models/aqi_model.joblib', 'test_size': 0.2}
+2025-11-10 11:40:49,110 INFO Model saved to artifacts/models/aqi_model.joblib. RMSE: 2.191
+2025-11-10 11:40:49,110 INFO Running model.predict_today with params {'model_path': 'artifacts/models/aqi_model.joblib', 'output_path': 'artifacts/predictions/prediction_{{date}}.csv'}
+2025-11-10 11:40:49,139 INFO Predictions saved to artifacts/predictions/prediction_2025-11-10.csv
+2025-11-10 11:40:49,139 INFO Pipeline finished

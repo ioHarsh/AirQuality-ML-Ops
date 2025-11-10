@@ -1,0 +1,37 @@
+version: 1.0
+schedule: "daily"
+steps:
+  - name: generate_sensors
+    module: data_generator
+    function: generate_sensor_readings
+    params:
+      days: 30
+      locations: 5
+      freq: "hourly"       # options: hourly (default) or daily
+  - name: generate_weather
+    module: data_generator
+    function: generate_weather_data
+    params:
+      days: 30
+      locations: 5
+  - name: etl
+    module: etl
+    function: run_etl
+    params:
+      sensor_path: artifacts/data/sensor_readings.csv
+      weather_path: artifacts/data/weather.csv
+      out_path: artifacts/data/processed.csv
+      agg_freq: "daily"    # aggregate hourly -> daily features
+  - name: train_model
+    module: model
+    function: train
+    params:
+      data_path: artifacts/data/processed.csv
+      model_path: artifacts/models/aqi_model.joblib
+      test_size: 0.2
+  - name: predict_today
+    module: model
+    function: predict_today
+    params:
+      model_path: artifacts/models/aqi_model.joblib
+      output_path: artifacts/predictions/prediction_{{date}}.csv
