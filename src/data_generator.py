@@ -43,7 +43,7 @@ def generate_weather_data(days=30, locations=5, out_path=None):
     # simple weather features correlated with AQI
     dates = _date_range(days, freq='hourly')
     rows = []
-    locations_list = [f"Loc_{i+1}" for i in range(locations)]
+    locations_list = ["Banglore", "Tokyo", "Hallstat", "Zurich", "Amsterdam"]
     for loc in locations_list:
         for ts in dates:
             temp = 15 + 10 * np.sin((ts.timetuple().tm_yday / 365) * 2 * np.pi) + np.random.normal(0,2)
