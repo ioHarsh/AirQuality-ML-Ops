@@ -61,11 +61,11 @@ def load_prediction(path):
 
 # optional static lat/lon mapping for simple map (edit coordinates to match real locations)
 DEFAULT_LOCATION_COORDS = {
-    "Loc_1": (28.7041, 77.1025),
-    "Loc_2": (12.9716, 77.5946),
-    "Loc_3": (19.0760, 72.8777),
-    "Loc_4": (13.0827, 80.2707),
-    "Loc_5": (22.5726, 88.3639),
+    "Banglore": (28.7041, 77.1025),
+    "Tokyo": (12.9716, 77.5946),
+    "Belfest": (19.0760, 72.8777),
+    "zurich": (13.0827, 80.2707),
+    "Hallstat": (22.5726, 88.3639),
 }
 
 # ---------- layout ----------
