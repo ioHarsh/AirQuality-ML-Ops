@@ -18,7 +18,8 @@ def _date_range(days, freq='hourly'):
 def generate_sensor_readings(days=30, locations=5, freq="hourly", out_path=None):
     dates = _date_range(days, freq=freq)
     rows = []
-    locations_list = [f"Loc_{i+1}" for i in range(locations)]
+# Replace dummy Loc_1..Loc_n with actual city names
+    locations_list = ["Banglore", "Tokyo", "Hallstat", "Zurich", "Amsterdam"]
     for loc in locations_list:
         # base pollution level varies by location
         base_pm25 = random.uniform(20, 70)
