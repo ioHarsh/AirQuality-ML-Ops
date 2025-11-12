@@ -3,11 +3,6 @@ venv/
 __pycache__/
 *.pyc
 
-# Data files
-data/
-predictions/
-outputs/
-*.csv
 
 # Streamlit cache
 .streamlit/

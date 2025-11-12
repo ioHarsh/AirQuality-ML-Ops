@@ -1,0 +1,72 @@
+name: daily-pipeline-commit
+
+on:
+  schedule:
+    - cron: '0 2 * * *'     # daily at 02:00 UTC (adjust)
+  workflow_dispatch:        # manual trigger availability
+
+permissions:
+  contents: write   # allow pushing commits with GITHUB_TOKEN
+
+jobs:
+  run_pipeline_and_commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo (fetch full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Make sure artifacts dirs exist
+        run: |
+          mkdir -p artifacts/predictions artifacts/data artifacts/models
+
+      - name: Run pipeline
+        id: pipeline
+        run: |
+          set -e
+          # run your pipeline runner - adjust if path differs
+          python -m src.pipeline_runner
+
+      - name: Check for prediction files
+        run: |
+          echo "Files in artifacts/predictions:"
+          ls -la artifacts/predictions || true
+
+      - name: Commit predictions back to repo (if changed)
+        id: commit_changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Add the predictions folder
+          git add artifacts/predictions || true
+
+          # Only commit if there are changes
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            echo "::set-output name=changed::false"
+          else
+            # Create a small commit with date
+            git commit -m "chore(pipeline): update predictions $(date -u +%F_%T)"
+            # Push back to the same branch that triggered workflow (usually main)
+            git push origin HEAD:${{ github.ref_name }}
+            echo "::set-output name=changed::true"
+          fi
+
+      - name: Upload predictions artifact for debugging
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-predictions
+          path: artifacts/predictions/

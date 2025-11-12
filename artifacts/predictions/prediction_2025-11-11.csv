@@ -1,0 +1,6 @@
+location,date,pm25_pred_next_day,aqi_category
+Loc_4,2025-11-12,63.176870833333325,Unhealthy
+Loc_3,2025-11-12,45.141926666666684,Unhealthy for Sensitive Groups
+Loc_2,2025-11-12,48.214601666666624,Unhealthy for Sensitive Groups
+Loc_1,2025-11-12,36.36670833333333,Unhealthy for Sensitive Groups
+Loc_5,2025-11-12,59.25993083333335,Unhealthy

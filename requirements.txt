@@ -5,3 +5,5 @@ pyyaml
 joblib
 apscheduler
 python-dateutil
+streamlit
+altair
