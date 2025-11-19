@@ -1,0 +1,6 @@
+location,date,pm25_pred_next_day,aqi_category
+Tokyo,2025-11-20,34.112645833333346,Moderate
+Hallstat,2025-11-20,22.678354166666665,Moderate
+Banglore,2025-11-20,25.722054166666663,Moderate
+Amsterdam,2025-11-20,34.08371666666668,Moderate
+Zurich,2025-11-20,33.62082916666666,Moderate
