@@ -1,0 +1,6 @@
+location,date,pm25_pred_next_day,aqi_category
+Tokyo,2025-12-25,42.352108333333355,Unhealthy for Sensitive Groups
+Hallstat,2025-12-25,50.30869166666668,Unhealthy for Sensitive Groups
+Banglore,2025-12-25,65.84046666666671,Unhealthy
+Amsterdam,2025-12-25,67.76004583333336,Unhealthy
+Zurich,2025-12-25,54.318466666666694,Unhealthy for Sensitive Groups
