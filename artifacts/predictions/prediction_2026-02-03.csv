@@ -1,0 +1,6 @@
+location,date,pm25_pred_next_day,aqi_category
+Tokyo,2026-02-04,67.93362499999996,Unhealthy
+Hallstat,2026-02-04,65.35877916666668,Unhealthy
+Banglore,2026-02-04,55.956804166666686,Unhealthy
+Amsterdam,2026-02-04,41.54495416666665,Unhealthy for Sensitive Groups
+Zurich,2026-02-04,29.977441666666646,Moderate
